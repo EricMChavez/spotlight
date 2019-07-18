@@ -26,7 +26,7 @@
 	align-items: center;
 }
 .toolbar {
-	background-color: blueviolet;
+	background-color: rgb(160, 81, 235);
 	grid-column: 2/ 3;
 	grid-row: 2 /3;
 
@@ -35,8 +35,9 @@
 	align-items: center;
 }
 .display {
-	background-image: radial-gradient(blue, darkblue);
-
+	background-color: black;
+	grid-column: 2/ 3;
+	grid-row: 3 /4;
 	display: flex;
 	justify-content: center;
 	align-items: center;

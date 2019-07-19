@@ -20,15 +20,11 @@
 	background-color: bisque;
 	grid-column: 1/ 2;
 	grid-row: 2 /4;
-
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	overflow: scroll;
 }
-.deckDoc {
-	padding-top: 65px;
-}
+
 .toolbar {
 	background-color: rgb(160, 81, 235);
 	grid-column: 2/ 3;
@@ -49,7 +45,7 @@
 .card {
 	width: 150px;
 	height: 84px;
-	margin-top: 15px;
+	margin: 15px 0;
 }
 .selected {
 	border-right: blue solid 10px;

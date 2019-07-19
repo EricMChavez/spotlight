@@ -6,22 +6,28 @@ import Display from './display';
 let pdf = 'https://spotlight-storage.s3.amazonaws.com/003-10-07-html-5-scalable-vector-graphics.pdf';
 class Body extends Component {
 	state = {
-		displayPage: 1
+		displayPage: 1,
+		numPages: NaN
+	};
+	setPages = (numPages) => {
+		this.setState(numPages);
 	};
 	handleNext = () => {
-		console.log('next called');
-		this.setState({ displayPage: this.state.displayPage + 1 });
+		if (this.state.displayPage != this.state.numPages) {
+			this.setState({ displayPage: this.state.displayPage + 1 });
+		}
 	};
 	handleBack = () => {
-		console.log('back called');
-		this.setState({ displayPage: this.state.displayPage - 1 });
+		if (this.state.displayPage != 1) {
+			this.setState({ displayPage: this.state.displayPage - 1 });
+		}
 	};
 	render() {
 		return (
 			<React.Fragment>
 				<Header />
-				<Deck content={pdf} PageNumber={this.displayPage} />
-				<Toolbar onNext={this.handleNext} onBack={this.handleBack} />
+				<Deck content={pdf} passPages={this.setPages} pageNumber={this.state.displayPage} />
+				<Toolbar onNext={this.handleNext} onBack={this.handleBack} numPages={this.state.numPages} />
 				<Display onClick={this.next} content={pdf} pageNumber={this.state.displayPage} />
 			</React.Fragment>
 		);

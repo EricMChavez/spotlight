@@ -4,6 +4,7 @@ class Toolbar extends Component {
 		return (
 			<div className="toolbar">
 				<button onClick={this.props.onBack}>Back</button>
+
 				<button onClick={this.props.onNext}>Next</button>
 			</div>
 		);

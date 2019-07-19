@@ -8,7 +8,7 @@ export default class Display extends Component {
 	render() {
 		return (
 			<Document className="display" file={this.props.content}>
-				<Page height={window.innerHeight - 150} className="page" pageNumber={this.props.pageNumber} />
+				<Page height={window.innerHeight - 150} pageNumber={this.props.pageNumber} />
 			</Document>
 		);
 	}
